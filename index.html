@@ -409,11 +409,14 @@
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <p class="modal-p">Оставьте свои данные, мы вам перезвоним</p>
-    <form class="modal-form" autocomplete="off">
-      <div class="input-wrap">  
+    <form class="modal-form" autocomplete="on">
+
+      
+
+      <div class="modal-field">  
         <label class="modal-label">Имя</label>
         <div class="input-wrap">
-          <input type="text" name="user-name" class="modal-input" placeholder="Борис Джонсонюк"
+          <input type="text" name="user-name" class="modal-input"
             required>
             <svg class="input-icon" width="18" height="18">
               <use href="./img/icons.svg#icon-person-black"></use>
@@ -423,23 +426,19 @@
       
       <div class="modal-field">
         <label class="modal-label" for="user-tel">Телефон</label>
-          
           <div class="input-wrap">
-            <input type="tel" name="user-tel" class="modal-input" placeholder="+38 (096) 111-11-11" required
+            <input type="tel" name="user-tel" class="modal-input" required
               minlength="10" title="+38 (096) 111-11-11" id="user-tel" />
             <svg class="input-icon" width="18" height="18">
               <use href="./img/icons.svg#icon-phone-black"></use>
             </svg>
           </div>
-        
-        </div>
+      </div>
 
         <div class="modal-field">
           <label class="modal-label" for="user-mail">Почта</label>
-  
-          
           <div class="input-wrap">
-            <input type="email" name="user-mail" class="modal-input" placeholder="example@gmail.com" required
+            <input type="email" name="user-mail" class="modal-input" required
               id="user-mail"/>
             <svg class="input-icon" width="18" height="18">
               <use href="./img/icons.svg#icon-email-black"></use>
@@ -449,13 +448,14 @@
 
         <div class="modal-field">
           <label class="modal-label" for="modal-text">Комментарий</label>
-          <div>
+          <div class="input-wrap">
             <textarea name="modal-text" id="modal-text" class="modal-text-area" placeholder="Введите текст"></textarea>
           </div>
         </div>
 
         <div class="modal-field">
           <input
+            required
             type="checkbox"
             name="privacy"
             id="privacy"
@@ -464,18 +464,20 @@
           <label for="privacy" class="check-text">
             <span>
               <svg class="check-icon" width="11" height="8">
-                <use href="./img/icons.svg#icon-che"></use>
+                <use href="./img/icons.svg#icon-vector-che"></use>
               </svg>
             </span>
-            Даю согласие на&nbsp; <a href="">обработку личных данных</a>
+            Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" class="dogovor">Условия договора</a>
           </label>
         </div>
 
-        <button type="submit" class="btn modal-btn">отправить</button>
+        <button type="submit" class="modal-btn">Отправить</button>
 
       </form>
       
-      <button type="button" class="modal-close-btn" data-modal-close></button>
+      <button type="button" class="modal-close-btn" data-modal-close><svg class="closebtn" width="24" height="24">
+        <use href="./img/icons.svg#icon-closebtn"></use>
+      </svg></button>
     </div>
   
   </div>
